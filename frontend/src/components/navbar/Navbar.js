@@ -1,36 +1,20 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import {Link} from 'react-router-dom'
+import { Menu } from '../menu/Menu'
 
 export const Navbar = () => {
   return (
-    <div className='navbar'>
-        <div className='logo'>
-            RaD
-        </div>
+    <nav
+      className="navbar flex justify-between text-lg py-0 fixed w-full duration-300 bg-darkBlue items-center font-avenir"
+      id="desktop-navbar"
+    >
+      <div className="logo px-5">
+        <Link to="/" className="font-semibold text-5xl text-white">
+          RaD
+        </Link>
+      </div>
 
-        <div className='menu'>
-            <ul>
-                <li>
-                    <Link to="/about">About</Link>
-                </li>
-
-                <li>
-                    <Link to="/meeting">Meeting</Link>
-                </li>
-            </ul>
-        </div>
-
-        <div className='user-account'>
-            <ul>
-                <li>
-                    <Link to="/login">Login</Link>
-                </li>
-
-                <li>
-                    <Link to="/register">Register</Link>
-                </li>
-            </ul>
-        </div>
-    </div>
+      <Menu />
+    </nav>
   )
 }

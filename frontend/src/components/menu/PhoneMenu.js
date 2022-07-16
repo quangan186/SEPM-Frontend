@@ -1,18 +1,19 @@
 import React from "react";
 import {Link} from 'react-router-dom'
-export const PhoneMenu = () => {
+export const PhoneMenu = (props) => {
+  const {isClicked} = props
   return (
-    <aside className="aside sm:hidden block">
+    <aside className="aside">
       <div
         id="sidebar-menu"
-        className="w-full h-screen translate-x-full opacity-0 duration-300 flex justify-end"
+        className={`w-full h-screen ${isClicked ? "translate-x-0 opacity-1 bg-black/30" : "translate-x-full opacity-0"}  duration-300 flex justify-end`}
       >
-        <div className="w-1/2 border-l border-l-black block  bg-white">
-          <ul className="text-center text-base">
+        <div className="w-1/2 border-l border-l-black block  bg-darkBlue2">
+          <ul className="text-center text-base text-white/50">
             <li>
               <Link
                 to="/about"
-                className="hover:bg-black hover:text-white duration-300 py-5 block w-full"
+                className="hover:text-white duration-300 py-5 block w-full"
               >
                 About
               </Link>
@@ -21,7 +22,7 @@ export const PhoneMenu = () => {
             <li>
               <Link
                 to="/meeting"
-                className="hover:bg-black hover:text-white duration-300 py-5 block w-full"
+                className="hover:text-white duration-300 py-5 block w-full"
               >
                 Meeting
               </Link>
@@ -30,7 +31,7 @@ export const PhoneMenu = () => {
             <li>
               <Link
                 to="/login"
-                className="hover:bg-black hover:text-white duration-300 text-black py-5 block w-full"
+                className="hover:text-white duration-300 py-5 block w-full"
               >
                 Login
               </Link>
@@ -38,7 +39,7 @@ export const PhoneMenu = () => {
             <li>
               <Link
                 to="/register"
-                className="hover:bg-black hover:text-white duration-300 py-5 block w-full"
+                className="hover:text-white duration-300 py-5 block w-full"
               >
                 Register
               </Link>

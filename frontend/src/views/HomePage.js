@@ -1,10 +1,10 @@
 import React from 'react'
-import { PhoneNavbar } from '../components/navbar/PhoneNavbar'
+import { Header } from '../components/header/Header'
 
 export const HomePage = () => {
   return (
     <>
-        <PhoneNavbar />
+        <Header />
     </>
   )
 }
